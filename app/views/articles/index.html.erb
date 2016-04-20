@@ -2,6 +2,8 @@
 
 <% @articles.each do |article| %>
 
+<%= link_to 'новая запись', new_article_path %>
+
 <h3>
 	<%= article.title %>
 </h3>

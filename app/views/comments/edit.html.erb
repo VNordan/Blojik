@@ -1,0 +1,17 @@
+<p>
+	<%= form_for :comment, url: article_comment_path(@article, @comment), method: :put do |f| %>
+		<p>
+			<%= f.label 'Автор' %><br>
+			<%= f.text_field :author %>
+		</p>
+		<p>
+			<%= f.label 'Комментарий' %><br>
+			<%= f.text_area :body %>
+		</p>
+		<p>
+			<%= f.submit 'Send' %>
+		</p>
+	<% end %>
+
+
+</p>

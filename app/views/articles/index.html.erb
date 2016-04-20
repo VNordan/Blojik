@@ -1,0 +1,19 @@
+<h1>Все статьи</h1>
+
+<% @articles.each do |article| %>
+
+<h3>
+	<%= article.title %>
+</h3>
+<p>
+	<%= article.text %>
+</p>
+<p>
+	<%= link_to 'показать', article_path(article) %> |
+	<%= link_to 'редактировать', edit_article_path(article) %> |
+	<%= link_to 'удалить', article_path(article), method: :delete, data: { confirm: 'Вы уверены?' } %>
+</p>
+
+<hr>
+
+<% end %>

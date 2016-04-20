@@ -1,8 +1,8 @@
 <h1>Все статьи</h1>
 
-<% @articles.each do |article| %>
-
 <%= link_to 'новая запись', new_article_path %>
+
+<% @articles.each do |article| %>
 
 <h3>
 	<%= article.title %>

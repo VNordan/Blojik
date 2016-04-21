@@ -9,9 +9,9 @@
 <body>
 <!-- <a href="/users/sign_in">Sign In</a> | <a href="/users/sign_out" data-method="delete">Sign Out</a> -->
 <% if user_signed_in? %>
-	<%= link_to 'выйти', destroy_user_session_path, method: :delete %>
+	<%= current_user.email %> | <%= link_to 'выйти', destroy_user_session_path, method: :delete %>
 <% else %>
-	<%= link_to 'войти', new_user_session_path %>
+	<%= link_to 'войти', new_user_session_path %> или <%= link_to 'зарегистрироваться', new_user_registration_path %>
 <%end %>
 
 <p class="notice"><%= notice %></p>
